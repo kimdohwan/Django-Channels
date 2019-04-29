@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'members.User'
+
 # Channels
 ASGI_APPLICATION = 'config.routing.application'
 CHANNEL_LAYERS = {
@@ -50,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'channels',
     'chat',
+    'members',
+    'alarms',
 ]
 
 MIDDLEWARE = [
