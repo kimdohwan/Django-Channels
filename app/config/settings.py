@@ -15,6 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -25,7 +26,9 @@ SECRET_KEY = '$9ir-#xs)j2=+-faav7s^%t2f5j2^nm4sizow52*az5fjv=g00'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ec2-13-209-99-230.ap-northeast-2.compute.amazonaws.com',
+]
 
 AUTH_USER_MODEL = 'members.User'
 
