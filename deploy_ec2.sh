@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-# required install before this script
-# - apt update
-# - apt upgrade
-# - apt install nginx
-# - apt install supervisor
-# - apt install redis-server
-# - apt install python3-pip
+# 1. required install before this script
+#   - apt update
+#   - apt upgrade
+#   - apt install nginx
+#   - apt install supervisor
+#   - apt install redis-server
+#   - apt install python3-pip
+# 2. set ENV "EC2_HOST", "SSH_KEY" from .secret/secret.json
 
-IDENTITY_FILE="$HOME/.ssh/aws-ec2-doh.pem"
+IDENTITY_FILE=$(echo $SSH_KEY)
 USER="ubuntu"
-HOST="ec2-54-180-104-68.ap-northeast-2.compute.amazonaws.com"
+HOST=$(echo $EC2_HOST)
 PROJECT_DIR="$HOME/Yolo/Django-Channels"
 
 # SERVER PATH
